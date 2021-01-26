@@ -1,0 +1,25 @@
+@import "utilities/variables";
+@import "utilities/functions";
+@import "utilities/mixins";
+@import "utilities/placeholders";
+
+@import "vendors/bootstrap";
+
+@import "base/reset";
+@import "base/base";
+@import "base/fonts";
+@import "base/helpers";
+@import "base/typography";
+@import "base/animations";
+
+@import "layout/navigation";
+@import "layout/header";
+@import "layout/grid";
+@import "layout/forms";
+@import "layout/footer";
+
+@import "components/buttons";
+
+@import "pages/home";
+
+@import "themes/default";

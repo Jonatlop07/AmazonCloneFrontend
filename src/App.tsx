@@ -1,4 +1,6 @@
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import Header from "./components/Header";
 
 function App() {
    return (
@@ -13,7 +15,7 @@ function App() {
           </Route>
           {/* Default route */}
           <Route path="/">
-            <h1>Home</h1>
+            <Header/>
           </Route>
         </Switch>
       </div>
