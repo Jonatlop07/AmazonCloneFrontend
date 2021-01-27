@@ -1,0 +1,11 @@
+$header-bg-color: #131921;
+
+.header {
+   background-color: $header-bg-color;
+   display: flex;
+   align-items: center;
+   #{&}_search {
+      display: flex;
+      flex: 1;
+   }
+}
