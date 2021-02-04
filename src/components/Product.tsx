@@ -1,12 +1,23 @@
-interface ProductProps {
-    id: string,
-    title: string,
-    price: number,
-    rating: number,
-    image: string
+import { useStateValue } from "./context";
+
+export type ProductType = {
+    id: string;
+    title: string;
+    price: number;
+    rating: number;
+    image: string;
 }
 
-const Product: React.FC<ProductProps>  = ({ id, title, price, rating, image }: ProductProps) => {
+const Product: React.FC<ProductType>  = ({ id, title, price, rating, image }: ProductType) => {
+    const {state, dispatch} = useStateValue();
+
+    const addToBasket = () => {
+        dispatch({
+            type: 'ADD_TO_BASKET',
+            item: { id, title, price, rating, image }
+        });
+    };
+
     return (
         <article className="product">
             <div className="product__info">
@@ -25,7 +36,7 @@ const Product: React.FC<ProductProps>  = ({ id, title, price, rating, image }: P
             </div>
             
             <img src={image} alt=""/>
-            <button>Add to Basket</button>
+            <button onClick={addToBasket}>Add to Basket</button>
         </article>
     );
 }

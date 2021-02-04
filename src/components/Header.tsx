@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+import { useStateValue } from "./context";
+
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 
@@ -8,6 +10,8 @@ interface HeaderProps {
 }
  
 const Header: React.FC<HeaderProps> = (props: HeaderProps) => {
+    const {state, dispatch} = useStateValue();
+
     return ( 
         <nav className="header">
             <Link to="/">
@@ -42,7 +46,7 @@ const Header: React.FC<HeaderProps> = (props: HeaderProps) => {
                 <Link className="header__link" to="/checkout">
                     <div className="header__basket">
                         <ShoppingBasketIcon />
-                        <span>0</span>
+                        <span>{state.basket?.length}</span>
                     </div>
                 </Link>
             </div>

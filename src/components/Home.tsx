@@ -9,14 +9,16 @@ const Home = () => {
                 alt=""/>
                 <div className="home__row">
                     <Product
+                        key="pro1"
                         id="1234"
-                        title="Product example"
+                        title="Product example 1"
                         price={11.96}
                         rating={5}
                         image=""/>
                     <Product
+                        key="pro2"
                         id="1234"
-                        title="Product example"
+                        title="Product example 2"
                         price={11.96}
                         rating={5}
                         image=""/>
