@@ -4,6 +4,7 @@ $header-bg-color: #131921;
    background-color: $header-bg-color;
    display: flex;
    align-items: center;
+   position: sticky;
 
    #{&}__mainLogo {
       width: 100px;
@@ -20,6 +21,14 @@ $header-bg-color: #131921;
          padding: 10px;
          border: none;
          width: 100%;
+      }
+      &Icon {
+         height: 20px !important;
+         padding: 5px;
+         background-color: #cd9042;
+         &:hover {
+            cursor: pointer;
+         }
       }
    }
 
