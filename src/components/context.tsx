@@ -7,7 +7,15 @@ type InitialStateType = {
 }
 
 const initialState: InitialStateType = {
-    basket: []
+    basket: [
+        {
+            id: "345346546",
+            title: "Aaaa",
+            price: 43.34,
+            rating: 4,
+            image: ""
+        },
+    ]
 };
 
 const StateContext = createContext<{

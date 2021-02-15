@@ -31,7 +31,8 @@ const Product: React.FC<ProductType>  = ({ id, title, price, rating, image }: Pr
                         .fill(0)
                         .map((_) => (
                             <p>⭐</p>
-                        )) }
+                        )) 
+                    }
                 </div>
             </div>
             
